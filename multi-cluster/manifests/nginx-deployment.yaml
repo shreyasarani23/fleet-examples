@@ -1,3 +1,13 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: nginx-config
+  namespace: fleet-demo
+data:
+  proxy-connect-timeout: "10s"
+  proxy-read-timeout: "10s"
+  client-max-body-size: "2m"
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
