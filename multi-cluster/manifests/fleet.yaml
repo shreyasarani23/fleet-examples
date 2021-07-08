@@ -4,8 +4,5 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: test
-  yaml:
-    overlays:
-    # Refers to overlays/scale3 folder
-    - scale3
+ 
 
