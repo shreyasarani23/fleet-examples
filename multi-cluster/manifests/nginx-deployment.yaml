@@ -25,7 +25,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: default
 spec:
   selector:
     matchLabels:
@@ -46,9 +45,9 @@ spec:
           readOnly: true
           name: nginx-config
       volumes:
-      - name: nginx-conf
+      - name: nginx-config
         configMap:
-          name: nginx-conf # place ConfigMap `nginx-conf` on /etc/nginx
+          name: nginx-config # place ConfigMap `nginx-conf` on /etc/nginx
           items:
             - key: nginx.conf
               path: nginx.conf
